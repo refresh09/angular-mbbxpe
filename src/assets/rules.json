@@ -1,0 +1,38 @@
+[
+  {
+    "key": "name",
+    "conditions": [
+      {
+        "type": "required",
+        "value": "true"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      },
+      {
+        "type": "forbiddenName",
+        "value": "bob"
+      }
+    ] 
+  }, 
+  {
+    "key" : "alterEgo",
+    "conditions": [
+     {
+       "type": "compare",
+       "dependent": "name",
+       "operator": "!="
+     } 
+    ]
+  },
+  {
+    "key": "power",
+    "conditions": [
+      {
+        "type": "required",
+        "value": "true"
+      }
+    ] 
+  }
+]
